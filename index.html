@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AeroSpace | Missions, Vehicles & Launch Schedule</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav" id="siteNav">
+    <a class="brand" href="#">AEROSPACE</a>
+    <ul class="nav-links">
+      <li><a href="#missions" class="active" data-target="missions">Missions</a></li>
+      <li><a href="#vehicles" data-target="vehicles">Vehicles</a></li>
+      <li><a href="#schedule" data-target="schedule">Launches</a></li>
+      <li><a href="#gallery" data-target="gallery">Gallery</a></li>
+      <li><a href="#" data-target="">Careers</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-cta">Watch Live</button>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img src="https://picsum.photos/seed/rocketlaunch1/1600/900" alt="Rocket launch at night">
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="dot"></span> Next launch in <span id="heroCountdown">--:--:--</span></p>
+      <h1>Making life<br>multiplanetary.</h1>
+      <p>Reusable rockets, orbital-class vehicles, and a growing constellation built to carry crew, cargo, and the next era of exploration.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">Watch Webcast</button>
+        <a class="btn-outline" href="#schedule">View Schedule</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack">
+      <span><b>412</b> Total Launches</span>
+      <span><b>398</b> Booster Landings</span>
+      <span><b>6,200+</b> Satellites Deployed</span>
+      <span><b>19</b> Astronauts Flown</span>
+      <span><b>412</b> Total Launches</span>
+      <span><b>398</b> Booster Landings</span>
+      <span><b>6,200+</b> Satellites Deployed</span>
+      <span><b>19</b> Astronauts Flown</span>
+    </div>
+  </div>
+
+  <main>
+
+    <section id="missions">
+      <div class="shell section-head reveal">
+        <p class="eyebrow">Featured Missions</p>
+        <h2>Recent & upcoming flights</h2>
+        <p>From resupply runs to crewed orbital flights, every mission pushes reusable spaceflight further.</p>
+      </div>
+      <div class="mission-grid">
+        <a class="mission-card reveal" href="#">
+          <img src="https://picsum.photos/seed/missionorbit1/500/620" alt="Orbital resupply mission">
+          <div class="mission-info">
+            <span class="mission-status">Completed</span>
+            <h3>Orbital Resupply 29</h3>
+            <span class="date">Cargo Dragon · Aug 12, 2026</span>
+          </div>
+        </a>
+        <a class="mission-card reveal" href="#">
+          <img src="https://picsum.photos/seed/missioncrew1/500/620" alt="Crewed mission to orbit">
+          <div class="mission-info">
+            <span class="mission-status">Completed</span>
+            <h3>Crew Flight 11</h3>
+            <span class="date">Crew Dragon · Jul 03, 2026</span>
+          </div>
+        </a>
+        <a class="mission-card reveal" href="#">
+          <img src="https://picsum.photos/seed/missionsat1/500/620" alt="Satellite constellation deployment">
+          <div class="mission-info">
+            <span class="mission-status">Upcoming</span>
+            <h3>Constellation Batch 61</h3>
+            <span class="date">Falcon 9 · Sep 02, 2026</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="vehicles" style="background:var(--near-black)">
+      <div class="shell">
+        <div class="section-head reveal" style="margin:0 auto 40px">
+          <p class="eyebrow">Fleet</p>
+          <h2>Built to fly again</h2>
+          <p>Every vehicle in the fleet is engineered around reusability, from booster landings to fairing recovery.</p>
+        </div>
+
+        <div class="vehicle-tabs reveal">
+          <button class="vehicle-tab active" data-vehicle="falcon9">Falcon 9</button>
+          <button class="vehicle-tab" data-vehicle="falconheavy">Falcon Heavy</button>
+          <button class="vehicle-tab" data-vehicle="starship">Starship</button>
+          <button class="vehicle-tab" data-vehicle="dragon">Dragon</button>
+        </div>
+
+        <div class="vehicle-panel active reveal" id="panel-falcon9">
+          <img src="https://picsum.photos/seed/falcon9rocket/700/700" alt="Falcon 9 rocket on the pad">
+          <div class="vehicle-copy">
+            <h3>Falcon 9</h3>
+            <p>A two-stage, reusable rocket designed to reliably carry crew and payloads into orbit. The world's first orbital-class reusable rocket, flown and landed on repeat.</p>
+            <div class="spec-grid">
+              <div class="spec"><b>70 m</b><span>Height</span></div>
+              <div class="spec"><b>22,800 kg</b><span>Payload to LEO</span></div>
+              <div class="spec"><b>9</b><span>Merlin Engines</span></div>
+              <div class="spec"><b>24×</b><span>Booster Reflights (max)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-panel" id="panel-falconheavy">
+          <img src="https://picsum.photos/seed/falconheavy/700/700" alt="Falcon Heavy rocket at launch">
+          <div class="vehicle-copy">
+            <h3>Falcon Heavy</h3>
+            <p>The most powerful operational rocket in the fleet, built from three Falcon 9 boosters strapped together to lift the heaviest payloads.</p>
+            <div class="spec-grid">
+              <div class="spec"><b>70 m</b><span>Height</span></div>
+              <div class="spec"><b>63,800 kg</b><span>Payload to LEO</span></div>
+              <div class="spec"><b>27</b><span>Merlin Engines</span></div>
+              <div class="spec"><b>3</b><span>Recoverable Boosters</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-panel" id="panel-starship">
+          <img src="https://picsum.photos/seed/starshipvehicle/700/700" alt="Starship on launch mount">
+          <div class="vehicle-copy">
+            <h3>Starship</h3>
+            <p>A fully reusable transportation system designed to carry crew and cargo to Earth orbit, the Moon, Mars, and beyond.</p>
+            <div class="spec-grid">
+              <div class="spec"><b>121 m</b><span>Stacked Height</span></div>
+              <div class="spec"><b>150,000 kg</b><span>Payload (reusable)</span></div>
+              <div class="spec"><b>33</b><span>Raptor Engines (booster)</span></div>
+              <div class="spec"><b>100%</b><span>Design Reusability Goal</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-panel" id="panel-dragon">
+          <img src="https://picsum.photos/seed/dragoncapsule/700/700" alt="Dragon capsule docking">
+          <div class="vehicle-copy">
+            <h3>Dragon</h3>
+            <p>A human-rated spacecraft capable of carrying up to seven crew or pressurized cargo to and from the ISS and beyond.</p>
+            <div class="spec-grid">
+              <div class="spec"><b>8.1 m</b><span>Height</span></div>
+              <div class="spec"><b>7</b><span>Max Crew</span></div>
+              <div class="spec"><b>6,000 kg</b><span>Cargo Up</span></div>
+              <div class="spec"><b>210 days</b><span>Max Docked Duration</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="countdown-block reveal">
+          <p class="eyebrow">Next Launch</p>
+          <h2 style="margin:0">Constellation Batch 61</h2>
+          <div class="countdown-timer">
+            <div><b id="cd-days">00</b><span>Days</span></div>
+            <div><b id="cd-hours">00</b><span>Hours</span></div>
+            <div><b id="cd-mins">00</b><span>Minutes</span></div>
+            <div><b id="cd-secs">00</b><span>Seconds</span></div>
+          </div>
+          <button class="btn-primary">Set Reminder</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Launch Schedule</p>
+          <h2>Upcoming flights</h2>
+        </div>
+        <div class="launch-list reveal">
+          <div class="launch-row">
+            <div class="l-date"><b>02</b>SEP</div>
+            <div><div class="l-mission">Constellation Batch 61</div><div class="l-vehicle">Falcon 9 · Pad 39A</div></div>
+            <div class="l-vehicle">06:14 UTC</div>
+            <span class="status-pill go">Go for launch</span>
+          </div>
+          <div class="launch-row">
+            <div class="l-date"><b>09</b>SEP</div>
+            <div><div class="l-mission">Orbital Resupply 30</div><div class="l-vehicle">Cargo Dragon · SLC-40</div></div>
+            <div class="l-vehicle">11:47 UTC</div>
+            <span class="status-pill confirmed">Confirmed</span>
+          </div>
+          <div class="launch-row">
+            <div class="l-date"><b>17</b>SEP</div>
+            <div><div class="l-mission">Comms Relay Alpha</div><div class="l-vehicle">Falcon Heavy · Pad 39A</div></div>
+            <div class="l-vehicle">03:05 UTC</div>
+            <span class="status-pill confirmed">Confirmed</span>
+          </div>
+          <div class="launch-row">
+            <div class="l-date"><b>25</b>SEP</div>
+            <div><div class="l-mission">Crew Flight 12</div><div class="l-vehicle">Crew Dragon · Pad 39A</div></div>
+            <div class="l-vehicle">14:20 UTC</div>
+            <span class="status-pill confirmed">Confirmed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-strip">
+      <div class="stat"><b>412</b><span>Launches</span></div>
+      <div class="stat"><b>398</b><span>Landings</span></div>
+      <div class="stat"><b>19</b><span>Astronauts Flown</span></div>
+      <div class="stat"><b>6,200+</b><span>Satellites in Orbit</span></div>
+    </div>
+
+    <section id="gallery">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2>From liftoff to landing</h2>
+        </div>
+        <div class="gallery-grid reveal">
+          <img src="https://picsum.photos/seed/gal1launch/400/300" alt="Launch plume" data-lightbox>
+          <img src="https://picsum.photos/seed/gal2landing/400/300" alt="Booster landing" data-lightbox>
+          <img src="https://picsum.photos/seed/gal3earth/400/300" alt="Earth from orbit" data-lightbox>
+          <img src="https://picsum.photos/seed/gal4pad/400/300" alt="Launch pad at dawn" data-lightbox>
+          <img src="https://picsum.photos/seed/gal5crew/400/300" alt="Crew suit up" data-lightbox>
+          <img src="https://picsum.photos/seed/gal6fairing/400/300" alt="Fairing separation" data-lightbox>
+          <img src="https://picsum.photos/seed/gal7night/400/300" alt="Night launch" data-lightbox>
+          <img src="https://picsum.photos/seed/gal8control/400/300" alt="Mission control" data-lightbox>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">AEROSPACE</div>
+          <p>Designing, manufacturing, and launching advanced rockets and spacecraft to reduce the cost of access to space.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><a href="#missions">Missions</a><a href="#vehicles">Vehicles</a><a href="#schedule">Launch Schedule</a><a href="#gallery">Gallery</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a></div>
+        <div class="footer-col"><h4>Follow</h4><a href="#">X</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AeroSpace (Demo project) — Not affiliated with SpaceX or any spaceflight company.</span>
+        <span>Made for practice/portfolio use</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
